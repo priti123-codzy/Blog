@@ -8,6 +8,14 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
         document.getElementById('background')?.classList.add('!hidden');
     };
 
+const AuthLinks = () => (
+    <>
+        <Link href={route('admin.login')}>Admin Login</Link>
+        <Link href={route('user.login')}>User Login</Link>
+    </>
+);
+
+
     return (
         <>
             <Head title="Welcome" />
